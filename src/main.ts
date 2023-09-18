@@ -1,12 +1,20 @@
+import { interactWallet } from "./interactWallet";
 import { interactSOL } from "./interactSOL";
-import { wallet } from "./wallet";
+import { createSPLToken } from "./createSPLToken";
+import { interactSPLToken } from "./interactSPLToken";
 
 const main = async () => {
-  // test wallet
-  wallet();
+  // test interactWallet
+  // interactWallet();
 
   // test interactSOL
-  interactSOL();
+  // interactSOL();
+
+  // test createSPLToken
+  // createSPLToken();
+
+  // test interactSPLToken
+  interactSPLToken();
 };
 
 main();

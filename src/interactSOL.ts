@@ -5,23 +5,11 @@ import {
   SystemProgram,
   Transaction,
 } from "@solana/web3.js";
-import bs58 from "bs58";
+import { acc1, acc2 } from "./share/wallet";
 
 export const interactSOL = async () => {
   // Create Connection
   const connection = new Connection("https://api.devnet.solana.com");
-
-  // Create Keypair from SecretKey
-  const acc1 = Keypair.fromSecretKey(
-    bs58.decode(
-      "3evCMJshqND69vFWDG9RPouWUFED3xb6GEtLLd1bafERdt1ET5ramtyNS1Pp1WryJoi3mR466jjaPqh4nezbVFNj"
-    )
-  );
-  const acc2 = Keypair.fromSecretKey(
-    bs58.decode(
-      "gQ9NJuGt5c533w4Khj5s8weCXbGEgtDpFqxE7q9xfouAwUcKoQ1nVCGAsb8J9aEJNhLGvLLrNxtjmWhtsiBfpqk"
-    )
-  );
 
   // Request Airdrop
   (async () => {

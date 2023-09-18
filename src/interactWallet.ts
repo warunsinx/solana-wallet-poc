@@ -4,7 +4,7 @@ import * as bip39 from "bip39";
 import * as bs58 from "bs58";
 import { HDKey } from "micro-ed25519-hdkey";
 
-export const wallet = async () => {
+export const interactWallet = async () => {
   //Generate Solana Keypair from Ethers Mnemonic
   const mnemonic = ethers.Wallet.createRandom().mnemonic;
   const phrase = mnemonic?.phrase || "";
